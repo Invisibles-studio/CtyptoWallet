@@ -3,6 +3,8 @@ import 'package:crypto_wallet/CustomComponents/GradientText.dart';
 import 'package:crypto_wallet/CustomComponents/RoundedButton.dart';
 import 'package:flutter/material.dart';
 
+import '../Colors.dart';
+
 class WalletSetupWelcome extends StatefulWidget {
   const WalletSetupWelcome({Key? key}) : super(key: key);
 
@@ -20,7 +22,7 @@ class _WalletSetupWelcomeState extends State<WalletSetupWelcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.backgroundMain,
+      backgroundColor: ProjectColors.backgroundMain,
       body: SafeArea(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +45,7 @@ class _WalletSetupWelcomeState extends State<WalletSetupWelcome> {
                   fontSize: 16
                 ),),
                   radius: const BorderRadius.all(Radius.circular(168)),
-                  color: Colors.gray21,
+                  color: ProjectColors.gray21,
                   height: 56,
                   width: MediaQuery.of(context).size.width-48,
                 ),
@@ -53,7 +55,7 @@ class _WalletSetupWelcomeState extends State<WalletSetupWelcome> {
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 16
-                ),), Colors.startScreenGradient, borderRadius: BorderRadius.circular(168),
+                ),), ProjectColors.startScreenGradient, borderRadius: BorderRadius.circular(168),
                   height: 56,
                   width: MediaQuery.of(context).size.width-48,)
 

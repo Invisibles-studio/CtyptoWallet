@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:crypto_wallet/Colors.dart';
 import 'package:crypto_wallet/CustomComponents/GradientText.dart';
 import 'package:crypto_wallet/CustomComponents/RoundedButton.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class _StartScreen extends State<StartScreen>{
   List<Widget> circlesReturn(){
     List<Widget> widgets = [];
     for (int i = 0; i<3; i++){
-      widgets.add(Icon(Icons.circle, color: stage-1 == i ? Colors.selectedCircle : Colors.noneSelectedCircle, size: 8,));
+      widgets.add(Icon(Icons.circle, color: stage-1 == i ? ProjectColors.selectedCircle : ProjectColors.noneSelectedCircle, size: 8,));
       widgets.add(const Padding(padding: EdgeInsets.only(left: 4)));
     }
     return widgets;
@@ -32,8 +33,8 @@ class _StartScreen extends State<StartScreen>{
   bool visible = true;
   bool visibleText = true;
 
-  Gradient  textGradientUp = Colors.whiteGradient;
-  Gradient  textGradientDown = Colors.startScreenGradient;
+  Gradient  textGradientUp = ProjectColors.whiteGradient;
+  Gradient  textGradientDown = ProjectColors.startScreenGradient;
 
   TextStyle textStyleUp = const TextStyle(
       color: Colors.white,
@@ -92,8 +93,8 @@ class _StartScreen extends State<StartScreen>{
           textStyleDown = textStyleUp;
           textStyleUp = temp;
 
-          textGradientDown = Colors.whiteGradient;
-          textGradientUp = Colors.startScreenGradient;
+          textGradientDown = ProjectColors.whiteGradient;
+          textGradientUp = ProjectColors.startScreenGradient;
 
           buttonText = "Get start";
           Future.delayed(const Duration(milliseconds: 500), () {
@@ -118,7 +119,7 @@ class _StartScreen extends State<StartScreen>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.backgroundMain,
+      backgroundColor: ProjectColors.backgroundMain,
       body: SafeArea(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -162,7 +163,7 @@ class _StartScreen extends State<StartScreen>{
                     fontWeight: FontWeight.bold),
                 ),
                   radius: const BorderRadius.all(Radius.circular(80)),
-                  color: Colors.gray21,
+                  color: ProjectColors.gray21,
                   height: 48,
                   width: MediaQuery.of(context).size.width-48,
                 ),
